@@ -1,12 +1,32 @@
 import matplotlib.pyplot as plt
-import seaborn as sns
+import seaborn as sb
 import pandas as pd
 import numpy as np
+from pandas.plotting import scatter_matrix
 
 dataset = pd.read_csv("../TestData/iris.csv")
 
 def main():
-    coRelation()
+    seaboarnPackage()
+
+
+def seaboarnPackage():
+    # sb.get_dataset_names()
+    df = sb.load_dataset('diamonds')
+    # print(dataset)
+    # sb.histplot(df['price'],kde = True)
+    sb.pairplot(dataset, hue='Species')
+    plt.show()
+
+def corelationpart2():
+    df = pd.DataFrame({'var_1': np.random.randint(0, 100, 500)})
+    df['var_2'] = df['var_1'] + np.random.normal(0, 20, 500)  ## positively correlated with var_1
+    df['var_3'] = 100 - df['var_1'] + np.random.normal(0, 20, 500)  ##negatively correlated with var_1
+    print(df)
+    print(df.corr())
+
+    scatter_matrix(df)
+    plt.show()
 
 def coRelation():
     x  = np.random.randint(0,100,500)
@@ -45,9 +65,9 @@ def histogram():
 def visualizeData():
     print(dataset)
 
-    # sns.scatterplot(x='Sepal.Length' , y ='Sepal.Width' , hue = 'Species', data = dataset)
+    # sb.scatterplot(x='Sepal.Length' , y ='Sepal.Width' , hue = 'Species', data = dataset)
     # plt.show()
-    # sns.countplot(y='Species',data = dataset)
+    # sb.countplot(y='Species',data = dataset)
     # plt.show()
     # subjects = ['maths', 'computers', 'english', 'Accounts', 'Economics']
     # counts = [100, 40, 35, 29, 20]
