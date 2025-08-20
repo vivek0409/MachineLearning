@@ -1,0 +1,15 @@
+Day 3:
+Types of Classification Algorithm 
+
+K-nearest neighbors
+Naïve Bayes
+Logistic Regression (GLM)
+Decision Tree
+Random Forest
+Neural Network
+Support Vector Machine
+
+Types of Regression Algorithm 
+Linear 
+Multiple
+Logestic
