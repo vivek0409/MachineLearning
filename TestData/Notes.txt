@@ -1,6 +1,5 @@
 Day 3:
 Types of Classification Algorithm 
-
 K-nearest neighbors
 Naïve Bayes
 Logistic Regression (GLM)
@@ -12,4 +11,16 @@ Support Vector Machine
 Types of Regression Algorithm 
 Linear 
 Multiple
-Logestic
+Logistic
+
+
+ML Life Cycle:
+Data access and collection > data is processed via ETL > data cleansing 
+Data preparation and exploration
+Model build and learn
+Model Evaluation
+Model Deployment
+
+Category of Statistics:
+Inferential 
+Descriptive
