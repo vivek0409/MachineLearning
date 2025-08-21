@@ -8,6 +8,35 @@ from sklearn import tree
 
 # creditdata = pd.read_csv("../TestData/Credit_Data.csv")
 def main():
+    decisionTree_SocialNetworkData()
+
+
+def decisionTree_SocialNetworkData():
+    ssd = pd.read_csv("../TestData/decision_tree_classification_social_Network_ads.csv")
+
+    df = pd.DataFrame(ssd)
+    print(df)
+
+    X = df.iloc[:,:2].values
+    y= df.iloc[:,2:].values
+
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)
+    classifier = DecisionTreeClassifier(criterion='entropy', max_depth=3)
+    classifier.fit(X_train, y_train)
+    y_predict = classifier.predict(X_test)
+    # print(y_predict)
+
+    accuracy = accuracy_score(y_predict, y_test)
+    print(accuracy)
+
+    # new_cust = [[46, 41000]]
+    # print(classifier.predict(new_cust))
+
+    # tree.plot_tree(classifier)
+    # plt.show()
+
+
+def decisionTreeSampleData():
     data = {
         'Income': [50000, 60000, 75000, 40000, 80000, 55000, 70000, 45000],
         'Debt': [20000, 15000, 25000, 10000, 30000, 22000, 18000, 12000],
@@ -20,12 +49,12 @@ def main():
     # print(df.describe())
     # print(list(df.columns.values))
     # print(df.isnull().sum())
-    X = df.iloc[:,:3]
+    X = df.iloc[:, :3]
     # print(X)
-    y = df.iloc[:,3:]
+    y = df.iloc[:, 3:]
     # print(y)
 
-    X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=0.3,random_state=0)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)
     # print(X_train)
     # print(X_test)
     #
@@ -33,19 +62,18 @@ def main():
     # print(y_test)
 
     classifier = DecisionTreeClassifier(criterion='entropy', max_depth=3)
-    classifier.fit(X_train,y_train)
+    classifier.fit(X_train, y_train)
     y_predict = classifier.predict(X_test)
     # print(y_predict)
 
-    accuracy = accuracy_score(y_predict,y_test)
+    accuracy = accuracy_score(y_predict, y_test)
     print(accuracy)
 
-    ner_cust = [[50000,16000,2]]
+    ner_cust = [[50000, 16000, 2]]
     print(classifier.predict(ner_cust))
 
     tree.plot_tree(classifier)
     plt.show()
-
 
 
 if __name__== "__main__":
