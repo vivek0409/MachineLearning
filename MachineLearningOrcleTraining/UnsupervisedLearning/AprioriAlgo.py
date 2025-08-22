@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 from sklearn import datasets
 import matplotlib.pyplot as plt
-import matplotlib# Or 'Qt5Agg' if you have PyQt5 installed
+import matplotlib
 from apyori import apriori
 
 
