@@ -14,7 +14,7 @@ def main():
     readingViaCSVFile()
 
 def readingViaCSVFile():
-    dataset = pd.read_csv("../TestData/iris.csv")
+    dataset = pd.read_csv("../../TestData/iris.csv")
     # print(dataset.shape)
     # print(dataset.describe())
     # print(dataset.info())

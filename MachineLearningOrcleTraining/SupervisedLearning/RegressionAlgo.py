@@ -15,7 +15,7 @@ def main():
     regeressionAlgo_heightWeightData()
 
 def regeressionAlgo_heightWeightData():
-    df = pd.read_csv("../TestData/height-weight.csv")
+    df = pd.read_csv("../../TestData/height-weight.csv")
     # print(df)
     # plt.scatter(df['Height'],df['Weight'])
     # plt.show()
@@ -60,7 +60,7 @@ def regeressionAlgo_heightWeightData():
 
 
 def regeressionAlgo_SalaryData():
-    salarydata = pd.read_csv("../TestData/Salary_Data.csv")
+    salarydata = pd.read_csv("../../TestData/Salary_Data.csv")
     # print(salarydata)
     X = salarydata.iloc[:,:1].values
     y= salarydata.iloc[:,1:].values

@@ -12,7 +12,7 @@ def main():
 
 
 def decisionTree_SocialNetworkData():
-    ssd = pd.read_csv("../TestData/decision_tree_classification_social_Network_ads.csv")
+    ssd = pd.read_csv("../../TestData/decision_tree_classification_social_Network_ads.csv")
 
     df = pd.DataFrame(ssd)
     print(df)

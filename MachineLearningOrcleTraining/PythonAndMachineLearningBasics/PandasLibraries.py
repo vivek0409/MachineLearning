@@ -1,7 +1,7 @@
 import pandas as pd
 
 def main():
-    sample_data = pd.read_csv("../TestData/Sample_data.csv")
+    sample_data = pd.read_csv("../../TestData/Sample_data.csv")
 
     sample_data['Total1'] = sample_data.loc[:,'Read':'SST'].sum(axis=1)
     sample_data['Total2'] = sample_data.loc[:, 'Read':'SST'].sum(axis=0)

@@ -65,7 +65,7 @@ def dataFrameSample():
     print(df.fillna('BAC'))
 
 def excelReaderAndWriter():
-    wb = xlsxwriter.Workbook('../TestData/mybook.xlsx')
+    wb = xlsxwriter.Workbook('../../TestData/mybook.xlsx')
     worksheet = wb.add_worksheet()
     chart = wb.add_chart({'type': 'line'})
 

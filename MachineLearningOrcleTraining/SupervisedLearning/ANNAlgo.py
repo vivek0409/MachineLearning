@@ -19,7 +19,7 @@ def main():
 
 def ANNAlgo_concreteDataset():
 
-    concrete = pd.read_csv("../TestData/concrete.csv")
+    concrete = pd.read_csv("../../TestData/concrete.csv")
     sc = MinMaxScaler()
     concrete = pd.DataFrame(sc.fit_transform(concrete))
     # print(concrete.describe())
@@ -76,7 +76,7 @@ def ANNAlgo_concreteDataset():
 
 
 def ANNAlgo_ChurnDataSet():
-    anndata = pd.read_csv("../TestData/Churn_Modelling.csv")
+    anndata = pd.read_csv("../../TestData/Churn_Modelling.csv")
     # print(anndata.shape)
     # print(anndata.describe())
     # print(anndata.isnull().sum())

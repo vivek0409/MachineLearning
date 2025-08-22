@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 from pandas.plotting import scatter_matrix
 
-dataset = pd.read_csv("../TestData/iris.csv")
+dataset = pd.read_csv("../../TestData/iris.csv")
 
 def main():
     seaboarnPackage()
